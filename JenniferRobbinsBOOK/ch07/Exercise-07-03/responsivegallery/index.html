@@ -1,52 +1,84 @@
 <!doctype html>
 <html>
+
 <head>
-<meta charset="UTF-8">
-<title>Blackstone Bistro Gallery</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-body {
-  background-color: #faf2e4;
-  margin: 0 10%;
-  font-family: sans-serif;
-  }
+  <meta charset="UTF-8">
+  <title>Blackstone Bistro Gallery</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body {
+      background-color: #faf2e4;
+      margin: 0 10%;
+      font-family: sans-serif;
+    }
 
-h1 {
-  text-align: center;
-  font-family: serif;
-  font-weight: normal;
-  text-transform: uppercase;
-  border-bottom: 1px solid #57b1dc;
-  margin-top: 30px;
-}
+    h1 {
+      text-align: center;
+      font-family: serif;
+      font-weight: normal;
+      text-transform: uppercase;
+      border-bottom: 1px solid #57b1dc;
+      margin-top: 30px;
+    }
 
-h2 {
-  color: #d1633c;
-  font-size: 1em;
-}
-img {
-	max-width: 100%;
-}
-</style>
+    h2 {
+      color: #d1633c;
+      font-size: 1em;
+    }
+
+    img {
+      max-width: 100%;
+    }
+  </style>
 
 </head>
 
 <body>
 
+  <h1>Blackstone Bistro Gallery</h1>
+  <p>Not only is our food good, it's also good-looking! Our patrons often stop to admire our fare
+    with a quick Instagram before digging in. We've collected a few of our favorite shots here.</p>
 
-<h1>Blackstone Bistro Gallery</h1>
-<p>Not is our food good, it's also good-looking! Our patrons often stop to admire our fare with a quick Instagram before digging in. We've collected a few of our favorite shots here.</p>
+  <h2>Our Baked Goods</h2>
+  <p>
+    <!-- picture element used to add responsive images to html files
+    it provides a series of conditions and source sets to let the browser choose
+    the option that best fits the current screen size of the user
+    you can use viewport as a parameter, screen size, resolution, etc.
+    first we need a img element to act as a fallback in case the browser is unable
+    to parse the responsive tags such as picture and the srcset attributes.
+    that being done, we add a list of sources that can be downloaded by the browser
+    according to the screen size or resolution (viewport). 
+    then "source" element includes a list of images to be used when the condition
+    is achieved. in this case, we used 480px as the minimum screen size for the browser
+    to display the 1200px and the 800px images. otherwise, it will display our
+    "img" element, with 400 px.
+    the "sizes" element specifies the viewport scale of the selected source to fit
+    the desired size. as you can see below, we used 100viewport-width when the screen
+    viewport is 512px or less. it will fit the entire screen.
+    if it is higher than 512px but less than 960px, it will show as 50vw.
+    if none of the conditions match, the browser displays the image exactly as a
+    static 200px image. -->
+    <picture>
+      <source media="(min-width: 480px)" srcset="images/bread-1200.jpg 1200w,
+        images/bread-800.jpg 800w"
+        sizes="(max-width: 512px) 100vw, (max-width: 960px) 50vw, 200px">
+      <img src="images/bread-400.jpg" alt="close-up of sliced bread">
+    </picture><br>
+    We start our day at the crack of dawn to bake our own muffins, bread, and dinner rolls. Loaves
+    not used that day are donated to the local food shelter.
+  </p>
 
-<h2>Our Baked Goods</h2>
-<p>We start our day at the crack of dawn to bake our own muffins, bread, and dinner rolls. Loaves not used that day are donated to the local food shelter. </p>
+  <h2>Our Burgers</h2>
+  <p>People come from all over to enjoy our lovingly made burgers. We grind our own locally-sourced
+    organic beef and turkey so you know it's fresh and free from fillers and other nonsense. Go for
+    one of our creative topping combos or stick with the classics. </p>
 
-<h2>Our Burgers</h2>
-<p>People come from all over to enjoy our lovingly made burgers. We grind our own locally-sourced organic beef and turkey so you know it's fresh and free from fillers and other nonsense. Go for one of our creative topping combos or stick with the classics. </p>
-
-<h2>Catch of the Day</h2>
-<p>Our chef works with local fisherman to pick the freshest the sea has to offer for our daily seafood special. Our Roast Cod Caponata with Roasted Potatoes is an old favorite with our regulars.</p>
-
-
+  <h2>Catch of the Day</h2>
+  <p>Our chef works with local fisherman to pick the freshest the sea has to offer for our daily
+    seafood special. Our Roast Cod Caponata with Roasted Potatoes is an old favorite with our
+    regulars.</p>
 
 </body>
+
 </html>

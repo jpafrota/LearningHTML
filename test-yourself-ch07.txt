@@ -1,0 +1,30 @@
+1. "alt" and "src"
+2. <img src="furry.jpg" alt="image of a ...">
+3. make it accessible to screen readers and make it more understandable to browsers when they're not able to download/display the image file.
+4. wrong tag wrapping, wrong path specified, unsupported format by the browser.
+5. x descriptor uses the screen resolution/density as a parameter.
+we use x descriptor for images that are static in different sites.
+w descriptor, however, uses viewport (current browser window size), so it's better for images that resize according to browser windows.
+6. a pixel can have different sizes depending on the device. a reference pixel can be based on multiple pixels to adjust and standardize pixel sizes.
+7. 
+> b
+> c
+> d
+> a
+> d
+> b
+8. it tells the browser to adjust the image to 80% of the viewport width if the browser window has at least 480px (480px or more).
+otherwise, it will display the image as 100% of the viewport width.
+the srcset tells the browser what img to download based on the current viewport width in pixels.
+and all of this will only be parsed by the browser if it supports the webp file type, as specified in the "type" tag.
+if the browser doesn't support webp files, it downloads a .jpg image, also with responsive rules. 
+the img element has the same rules of resizing and responsiveness as the source, which were discussed above.
+9. cache is a space in the memory of the browsers that keeps files, images and other resources pre-downloaded to be used in the next time the user visits the same page. makes loading quicker.
+10. one advantage is that it is pretty quick and simple to do this, however, we can't style the SVG this way.
+11. advantage is that we can have a better manipulation of the SVG, but it can become a large piece of code, hard to maintain.
+12. When it is purely presentational and not part of the editorial content of
+the page.
+13. image/svg+xml is the MIME type of an SVG file. You may need to include
+it as the value of the type attribute in the picture element or use it to
+configure your server to recognize SVG files as images.
+14. 
