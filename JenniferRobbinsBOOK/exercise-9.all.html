@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>PIZZARIA DO JORGINHO: Delivery</title>
+    <style>
+        ol,
+        ul {
+            list-style-type: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>PIZZARIA DO JORGIN | Pizza por encomenda</h1>
+
+    <!-- error here -->
+    <p>Our 12" wood-fired pizzas are available for delivery. Build your custom pizza and we'll
+        deliver
+        it within an hour.</p>
+
+    <!-- error here -->
+    <form action="https://www.blackgoosebistro.com/pizza.php" method="POST">
+
+        <fieldset>
+            <legend>Suas informações</legend>
+            <ul>
+                <li><label for="form-name">Nome:</label>
+                    <input type="text" name="customername" id="form-name">
+                </li>
+                <li><label for="form-address">Endereço:</label>
+                    <input type="text" name="address" id="form-address">
+                </li>
+                <li><label for="form-phone">Telefone:</label>
+                    <input type="tel" name="telephone" id="form-phone">
+                </li>
+                <li><label for="form-email">Email:</label>
+                    <input type="email" name="email" id="form-email">
+                </li>
+                <li><label for="form-story">Instruções de entrega:</label><br>
+                    <textarea name="instructions" id="form-story" rows="4" cols="60" maxlength="400"
+                        placeholder="No More than 400 characters long"></textarea>
+                </li>
+            </ul>
+        </fieldset>
+
+        <h2>Monte sua pizza dos sonhos:</h2>
+
+        <fieldset>
+
+            <legend>Características da Pizza</legend>
+
+            <fieldset>
+                <legend>Borda <em>(Escolha uma)</em>:</legend>
+                <ul>
+                    <li><label>
+                            <input type="radio" name="crust" value="white">Padrão</label>
+                    </li>
+                    <li><label>
+                            <input type="radio" name="crust" value="multigrain">Multi-grãos</label>
+                    </li>
+                    <li><label>
+                            <input type="radio" name="crust" value="cheese crust">Recheada com queijo</label>
+                    </li>
+                    <li><label>
+                            <input type="radio" name="crust" value="gluten free">Sem glúten</label>
+                    </li>
+                </ul>
+            </fieldset>
+
+            <fieldset>
+                <legend>Cobertura <em>(Escolha quantas quiser)</em>:</legend>
+                <ul>
+                    <li><label><input type="checkbox" checked name="toppings[]" value="red sauce">
+                            Molho Vermelho</label></li>
+                    <li><label><input type="checkbox" name="toppings[]" value="white sauce"> Molho Branco</label></li>
+                    <li><label><input type="checkbox" name="toppings[]" value="mozzarella">
+                            Queijo Mussarela</label></li>
+                    <li><label><input type="checkbox" name="toppings[]" value="pepperoni">
+                            Pepperoni</label></li>
+                    <li><label><input type="checkbox" name="toppings[]" value="mushrooms">
+                            Cogumelos</label></li>
+                    <li><label><input type="checkbox" name="toppings[]" value="peppers">
+                            Pimenta</label></li>
+                    <li><label><input type="checkbox" name="toppings[]" value="anchovies">
+                            Anchovas</label></li>
+                </ul>
+            </fieldset>
+
+            <fieldset>
+                <legend>Quantidade</legend>
+                <p>Quantas pizzas você deseja?
+                    <select name="pizzas">
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                        <option>6</option>
+                    </select>
+                </p>
+            </fieldset>
+
+
+            <!-- <p>/////// IGNORE COMPLETELY ///////</p>
+            <input type="file" name="photo">
+            <br>
+            <label>Satisfaction (0 to 10) <input type="range" name="satisfaction" min="0" max="10"
+                    step="1"></label>
+            <br>
+            <input type="range" value="5" min="1" max="10"
+                oninput="this.nextElementSibling.value = this.value">
+            <output>5</output>
+            <p>/////// IGNORE COMPLETELY ///////</p> -->
+
+
+        </fieldset>
+
+        <p><input type="submit" value="Bring me a pizza!"><input type="reset"></p>
+    </form>
+</body>
+
+</html>
